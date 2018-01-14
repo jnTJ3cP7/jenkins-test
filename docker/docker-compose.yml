@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  jenkins-master:
+    container_name: jenkins-master
+    build:
+      context: '.'
+      dockerfile: 'jenkins-master.dockerfile'
+    image: jenkins-master
+    ports:
+      - "18080:8080"
+    volumes:
+      - ./jenkins_home:/var/lib/jenkins
+      - ./ssh:/var/lib/jenkins/.ssh
+    environment:
+      - JENKINS_HOME=/var/lib/jenkins
+      # - JAVA_OPTS=-Djenkins.install.runSetupWizard=false

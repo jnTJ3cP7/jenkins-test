@@ -1,0 +1,6 @@
+/docker/jenkins_home/*
+!.gitkeep
+/.vagrant
+/Vagrantfile
+/config1*
+/config.ign*
