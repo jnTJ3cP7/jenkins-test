@@ -1,7 +1,14 @@
 import jenkins.model.*
 
-def instance  = Jenkins.getInstance()
-def plugins   = ["blueocean", "ssh-agent", "ssh-slaves", "simple-theme-plugin"]
+def instance = Jenkins.getInstance()
+def plugins = [
+  "blueocean",
+  "ssh-agent",
+  "ssh-slaves",
+  "simple-theme-plugin",
+  "extensible-choice-parameter"
+  // "timestamper"
+]
 
 pm = instance.getPluginManager()
 uc = instance.getUpdateCenter()
